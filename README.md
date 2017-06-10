@@ -17,7 +17,7 @@ We used the fast align [3] toolkit to obtain the alignment.
 
 Now we can get one dataset inlcuding <source, (1-best) translation, tags, alignment> for training.
 
-## Run the TQE trainer to learn the parameters for the model. 
+## Run the TQE trainer to train the model and testify its performance. 
 We implemented translation quality estimation model based on feedforward neural networks following [4].
 To train such TQE model using the generated dataset, please see the example in the fnn_tqe dir.
 Before training, we have to make a config file as in fnn_tqe/config.ini.
