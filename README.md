@@ -4,7 +4,7 @@ It describes the main steps to train translation quality estimation systems only
 following our recent paper [1]. 
 
 ## Train a machine translation system on one bilingual corpus, and then generate 1-best translations for the source side of another bilingual corpus. 
-We used Moses [2] as the translation system. For setup of Mosese, please follow the guideline from 
+We used Moses [2] as the translation system. For setup of Moses, please follow the guideline from 
 http://www.statmt.org/moses.
 
 
