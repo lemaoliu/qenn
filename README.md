@@ -44,6 +44,10 @@ python nn_bidir.py config.ini
 
 During the training, it will report the BAD F1 and Seq.Cor for both the dev and test sets, please check the file "eval.txt"
 
+
+## Q&A
+If you have any questions about this project, please let me know through either lemaoliu@qq.com or lemaoliu@gmail.com. Thanks for your interests.
+
 ## References:
 1. Liu et al., Translation Quality Estimation Using Only Bilingual Corpora, 
 IEEE/ACM Transactions on Audio, Speech and Language Processing
