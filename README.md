@@ -32,14 +32,17 @@ Additionally, these values of options denote the path of files:
 4. train.align, the alignment file between train.source and train.target
 5. dev.source, the source of valid file.
 
+Note that all of these files should be placed in directory w.r.t. the option (str data_dir sample)
 ...
 
 
-For training, just run the cmd:
+For training, go to the fnn_tqe dir and then run the cmd:
 
 ``
-python nn_bidir.py
+python nn_bidir.py config.ini
 `` 
+
+During the training, it will report the BAD F1 and Seq.Cor for both the dev and test sets, please check the file "eval.txt"
 
 ## References:
 1. Liu et al., Translation Quality Estimation Using Only Bilingual Corpora, 
