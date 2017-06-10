@@ -28,7 +28,8 @@ Additionally, these values of options denote the path of files:
 3. train.tags, the tag file of train.target
 4. train.align, the alignment file between train.source and train.target
 5. dev.source, the source of valid file.
-6. ...
+...
+
 `` 
 For training, just run the cmd:
 
