@@ -8,7 +8,8 @@ We used Moses [2] as the translation system. For setup of Mosese, please follow 
 http://www.statmt.org/moses.
 
 
-## Run the scripts to generate the tags for the 1-best translations using the target side (i.e. reference) of the above bilingual corpus.
+## Generate the tags for the 1-best translations using the target side (i.e. reference) of the above bilingual corpus.
+
 
 
 ## Run the word alignment between source and (1-best) translation.
