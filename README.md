@@ -11,8 +11,8 @@ http://www.statmt.org/moses.
 ## Run the scripts to generate the tags for the 1-best translations using the target side (i.e. reference) of the above bilingual corpus.
 
 
-
-## Run the word alignment between source and (1-best) translation using aligners such as fast align [3]
+## Run the word alignment between source and (1-best) translation.
+We used the fast align [3] toolkit to obtain the alignment.
 
 Now we can get one dataset inlcuding <source, (1-best) translation, tags, alignment> for training.
 
