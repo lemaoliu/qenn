@@ -38,8 +38,7 @@ Additionally, these values of options denote the path of files:
 3. train.tags, the tag file of train.target
 4. train.align, the alignment file between train.source and train.target
 5. dev.source, the source of dev set.
-
-...
+6. ...
 
 Note that all of these files should be placed in directory w.r.t. the option (str data_dir sample)
 
