@@ -39,8 +39,9 @@ Additionally, these values of options denote the path of files:
 4. train.align, the alignment file between train.source and train.target
 5. dev.source, the source of dev set.
 
-Note that all of these files should be placed in directory w.r.t. the option (str data_dir sample)
 ...
+
+Note that all of these files should be placed in directory w.r.t. the option (str data_dir sample)
 
 
 For training, go to the fnn_tqe dir and then run the cmd:
