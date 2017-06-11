@@ -10,7 +10,7 @@ http://www.statmt.org/moses.
 
 ## Generate the tags for the 1-best translations using the target side (i.e. reference) of the above bilingual corpus.
 Suppose tercom.7.25.jar is already installed following http://www.cs.umd.edu/~snover/tercom/ and its path is as shown in tagging/tagging.py.
-We can run the cmd to generate a tag file.
+We can run the cmd to generate a tag file called "data.tags".
 
 ``
 python tagging/tagging.py train.ref train.hyp 
