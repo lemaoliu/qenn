@@ -49,7 +49,7 @@ For training, go to the fnn_tqe dir and then run the cmd:
 python nn_bidir.py config.ini
 `` 
 
-During the training, it will report the BAD F1 and Seq.Cor for both the dev and test sets, please check the file "eval.txt"
+During the training, it will report the BAD F1 and Seq.Cor for both the dev and test sets, please check the file "eval.txt" for results.
 
 
 ## Q&A
