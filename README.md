@@ -1,7 +1,7 @@
 # Translation Quality Estimation (TQE) only Using Bilingual Corpora 
 
-It describes the main steps to train translation quality estimation systems only using bilingual corpus,
-following our recent paper [1]. 
+This toolkit describes the main steps to train translation quality estimation systems only using bilingual corpus,
+following our recent paper [1]. It is developed by Lemao Liu and Atsushi Fujita at NICT. 
 
 ## Train a machine translation system on one bilingual corpus, and then generate 1-best translations for the source side of another bilingual corpus. 
 We used Moses [2] as the translation system. For setup of Moses, please follow the guideline from 
@@ -9,11 +9,17 @@ http://www.statmt.org/moses.
 
 
 ## Generate the tags for the 1-best translations using the target side (i.e. reference) of the above bilingual corpus.
+Suppose tercom.7.25.jar is already installed following http://www.cs.umd.edu/~snover/tercom/ and its path is as shown in tagging/tagging.py.
+We can run the cmd to generate a tag file.
 
-
+``
+python tagging/tagging.py train.ref train.hyp 
+``
+Note train.ref and train.hyp are the reference and 1-best translation, respectively.
 
 ## Run the word alignment between source and (1-best) translation.
 We used the fast align [3] toolkit to obtain the alignment.
+
 
 Now we can get one dataset inlcuding <source, (1-best) translation, tags, alignment> for training.
 
@@ -22,7 +28,7 @@ We implemented translation quality estimation model based on feedforward neural 
 To train such TQE model using the generated dataset, please see the example in the fnn_tqe dir.
 Before training, we have to make a config file as in fnn_tqe/config.ini.
 ``
-In fnn_tqe/config.ini, each line includes 3 fields as options (type, key, value). For example,
+In fnn_tqe/config.ini, each line includes 3 fields as an option (type, key, value). For example,
 "int batch_size  400" indicates that the option batch_size is with value of an integer 400, and similarly,
 "str trg_file train.target" indicates that the option trg_file is with value of a string train.target.
 Additionally, these values of options denote the path of files: 
@@ -60,5 +66,4 @@ IEEE/ACM Transactions on Audio, Speech and Language Processing
 
 4. Kreutzer et al., Quality estimation from scratch (QUETCH): Deep learning for word-level translation 
 quality estimation, in Proceedings of the Tenth Workshop on Statistical Machine Translation, 2015. 
-
 
