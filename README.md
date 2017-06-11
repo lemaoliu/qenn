@@ -15,6 +15,7 @@ We can run the cmd to generate a tag file.
 ``
 python tagging/tagging.py train.ref train.hyp 
 ``
+
 Note train.ref and train.hyp are the reference and 1-best translation, respectively.
 
 ## Run the word alignment between source and (1-best) translation.
