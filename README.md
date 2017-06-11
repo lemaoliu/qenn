@@ -13,10 +13,10 @@ Suppose tercom.7.25.jar is already installed following http://www.cs.umd.edu/~sn
 We can run the cmd to generate a tag file called "data.tags".
 
 ``
-python tagging/tagging.py train.ref train.hyp 
+python tagging/tagging.py train.ref train.target 
 ``
 
-Note train.ref and train.hyp are the reference and 1-best translation, respectively.
+Note train.ref and train.target are the reference and 1-best translation, respectively.
 
 ## Run the word alignment between source and (1-best) translation.
 We used the fast align [3] toolkit to obtain the alignment.
