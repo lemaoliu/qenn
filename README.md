@@ -1,5 +1,7 @@
 # Translation Quality Estimation (TQE) only Using Bilingual Corpora 
 
+The entire toolkit will be released soon... If you have any requests for the toolkit, please contact lemaoliu@gmail.com. Thanks.   
+
 This toolkit describes the main steps to train translation quality estimation systems only using bilingual corpus,
 following our recent paper [1]. It is developed by Lemao Liu and Atsushi Fujita at NICT. 
 
