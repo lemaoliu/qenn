@@ -1,0 +1,43 @@
+#!/usr/bin/env perl
+
+use strict;
+
+my $mode = shift (@ARGV);
+
+while (<STDIN>) {
+    chomp;
+    next unless ($_ =~ /^Alignment: \(([A-Z ]+)\)/);
+    my $tags = $1;
+    &flush($tags, $mode);
+}
+
+sub flush {
+    my ($tags, $mode) = @_;
+    $tags =~ s/ /C/g;
+    $tags =~ s/D+/D/g;  ## Do not need to estimate the number of missing tokens
+    my @tags = split (//, $tags);
+    if ($mode eq 'space') {
+        my $newtag = 'E' . join ('E', @tags) . 'E';
+        $newtag =~ s/EDE/D/g;  ## compress redundant tags
+        ## run twice because the matching position is moved too much
+        $newtag =~ s/([SID])E([SID])/$1S$2/g;
+        $newtag =~ s/([SID])E([SID])/$1S$2/g;
+        $newtag =~ s/E/C/g;  ## normalize verbose tags for correct spaces
+        @tags = split (//, $newtag);
+    }
+
+    my @new = ();
+    foreach (@tags) {
+        ## Deletion (missing in the hypothesis) is ignored in the WMT setting
+        my $label =
+            ($_ eq 'C') ? 'OK' :
+            ($_ eq 'I') ? 'BAD' :
+            ($_ eq 'S') ? 'BAD' :
+            (($_ eq 'D') && ($mode eq 'space')) ? 'BAD' :
+            (($_ eq 'D') && ($mode ne 'space')) ? '' :
+            'UNK';
+        push (@new, $label) if ($label ne '');
+    }
+    print join (" ", @new), "\n";
+}
+
