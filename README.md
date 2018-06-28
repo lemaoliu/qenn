@@ -3,7 +3,7 @@
  
 
 This toolkit describes the main steps to train translation quality estimation systems only using bilingual corpus,
-following our recent paper [1]. It is developed by Lemao Liu and Atsushi Fujita at NICT. If you have any requests for the toolkit, please contact lemaoliu@gmail.com. Thanks. 
+following our recent paper [1]. It is developed by Lemao Liu and Atsushi Fujita at NICT. If you have any questions on the toolkit, please contact lemaoliu@gmail.com. Thanks. 
 
 ## Train a machine translation system on one bilingual corpus, and then generate 1-best translations for the source side of another bilingual corpus. 
 We used Moses [2] as the translation system. For setup of Moses, please follow the guideline from 
